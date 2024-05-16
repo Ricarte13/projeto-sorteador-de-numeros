@@ -6,6 +6,9 @@ function sortear() {
     if (de >= ate) { 
         alert('Comando não permitido! Veja se inseriu os dados corretamente.')
         return;
+    } else if (quantidade > (ate - de + 1)) {
+        alert('Qantidade de numéros é maior ou igual ao intervalo entre o campo "Do número" e do campor "Até o número"!');
+        return;
     }
 
     let sorteados = [];
