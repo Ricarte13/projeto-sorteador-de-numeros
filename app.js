@@ -3,6 +3,11 @@ function sortear() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
 
+    if (de >= ate) { 
+        alert('Comando não permitido! Veja se inseriu os dados corretamente.')
+        return;
+    }
+
     let sorteados = [];
     let numero;
 
@@ -16,6 +21,7 @@ function sortear() {
 
         sorteados.push(numero);
     }
+ 
 
     let resultado = document.getElementById('resultado');
     resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${sorteados}</label>`;
